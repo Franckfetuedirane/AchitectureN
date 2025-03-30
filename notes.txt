@@ -1,0 +1,43 @@
+ccNtier/
+├── hospital/
+│   ├── api/               # Couche présentation (vues API)
+│   ├── business/          # Couche métier
+│   │   ├── dto/           # Data Transfer Objects
+│   │   ├── exceptions/    # Exceptions métier
+│   │   └── services/      # Services métier
+│   ├── data/              # Couche données
+│   │   ├── models/        # Modèles
+│   │   └── repositories/  # Repository pattern
+│   ├── migrations/
+│   └── templates/
+├── config/                # Configuration du projet
+│   ├── settings/
+│   │   ├── base.py
+│   │   ├── development.py
+│   │   └── production.py
+│   └── urls.py
+└── manage.py
+
+
+
+Fonctionnalités détaillées 
+1. Gestion des patients 
+o Enregistrement des informations personnelles et médicales 
+o Historique des consultations et traitements 
+o Gestion des assurances et facturation 
+2. Personnel médical 
+o Profils des médecins avec spécialités 
+o Gestion des plannings et disponibilités 
+o Attribution des patients aux médecins 
+3. Planification 
+o Système de rendez-vous avec notifications 
+o Gestion des urgences et priorités 
+o Vue calendrier des disponibilités 
+4. Ressources hospitalières 
+o Suivi des lits disponibles par service 
+o Gestion de l'occupation des chambres 
+o Planification des interventions dans les blocs opératoires 
+5. Tableau de bord analytique 
+o Taux d'occupation par service 
+o Statistiques de consultations 
+o Indicateurs de performance
