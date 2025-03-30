@@ -1,10 +1,8 @@
-# config/urls.py
-from django.contrib import admin
-from django.urls import path, include
-from rest_framework.authtoken import views
+from django.urls import path
+from hospital.api.views.patient_views import PatientView
+from hospital.api.views.dashboard_view import DashboardView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api-token-auth/', views.obtain_auth_token),
-    path('api/', include('hospital.api.urls')),
+    path('patients/<int:patient_id>/', PatientView.as_view()),
+    path('dashboard/', DashboardView.as_view()),
 ]

@@ -28,3 +28,22 @@ class MedicalStaff(BaseModel):
         verbose_name = "Membre du personnel médical"
         verbose_name_plural = "Personnel médical"
         ordering = ['staff_type', 'last_name']
+
+
+from hospital.data.models.patient import Patient
+
+class Appointment(models.Model):
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    date = models.DateTimeField()
+    reason = models.TextField()
+
+    def __str__(self):
+        return f"Appointment for {self.patient} on {self.date}"
+    
+
+class Room(models.Model):
+    number = models.CharField(max_length=10)
+    is_occupied = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Room {self.number} - {'Occupied' if self.is_occupied else 'Available'}"
