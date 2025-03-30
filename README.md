@@ -11,8 +11,6 @@ Le projet suit une architecture N-Tiers avec les couches suivantes :
 ### Diagramme UML
 
 ```plantuml
-@startuml
-
 package "Présentation" {
   [API Views] --> [Serializers]
 }
@@ -29,4 +27,3 @@ package "Données" {
 [API Views] --> [Services]
 [Services] --> [Repositories]
 
-@enduml
